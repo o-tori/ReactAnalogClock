@@ -1,0 +1,62 @@
+:root{
+  /* 使うときはここをちょうせいしてね */
+  /* 時計の直径 */
+  --size:300px;
+
+  /* 時計の背面の色 */
+  --clockBackGroundColor:white;
+
+  /* 各針の色 */
+  --hourHandColor:#000d;
+  --minuteHandColor:#000d;
+  --secondHandColor:#0007;
+}
+
+.analogClock{
+  width: var(--size);
+  height: var(--size);
+  position: relative;
+
+  background: var(--clockBackGroundColor);
+  border: 1px solid black;
+  border-radius: 50%;
+
+}
+
+.hand{
+  position: absolute;
+  position: absolute;
+}
+
+.hourHand{
+  background: linear-gradient(to right, var(--hourHandColor) 50%,#0000 0%,#0000 100%);
+
+  --hourHandWidth:calc(var(--size)*0.6);
+  --hourHandHeight:calc(var(--size)*0.02);
+  width:var(--hourHandWidth);
+  height:var(--hourHandHeight);
+  top: calc((var(--size) - var(--hourHandHeight)) / 2);
+  left: calc((var(--size) - var(--hourHandWidth)) / 2);
+}
+
+.minuteHand{
+  background: linear-gradient(to right, var(--minuteHandColor) 50%,#0000 0%,#0000 100%);
+
+  --minuteHandWidth:calc(var(--size)*0.8);
+  --minuteHandHeight:calc(var(--size)*0.01);
+  width:var(--minuteHandWidth);
+  height:var(--minuteHandHeight);
+  top: calc((var(--size) - var(--minuteHandHeight)) / 2);
+  left: calc((var(--size) - var(--minuteHandWidth)) / 2);
+}
+
+.secondHand{
+  background: linear-gradient(to right, var(--secondHandColor) 50%,#0000 0%,#0000 100%);
+
+  --secondHandWidth:calc(var(--size)*0.9);
+  --secondHandHeight:calc(var(--size)*0.01);
+  width:var(--secondHandWidth);
+  height:var(--secondHandHeight);
+  top: calc((var(--size) - var(--secondHandHeight)) / 2);
+  left: calc((var(--size) - var(--secondHandWidth)) / 2);
+}
