@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/ReactAnalogClock/static/css/main.595a04ee.chunk.css",
-    "main.js": "/ReactAnalogClock/static/js/main.2306e227.chunk.js",
-    "main.js.map": "/ReactAnalogClock/static/js/main.2306e227.chunk.js.map",
+    "main.css": "/ReactAnalogClock/static/css/main.9960ac51.chunk.css",
+    "main.js": "/ReactAnalogClock/static/js/main.a53ee0b1.chunk.js",
+    "main.js.map": "/ReactAnalogClock/static/js/main.a53ee0b1.chunk.js.map",
     "runtime-main.js": "/ReactAnalogClock/static/js/runtime-main.7969c492.js",
     "runtime-main.js.map": "/ReactAnalogClock/static/js/runtime-main.7969c492.js.map",
     "static/js/2.55bbea13.chunk.js": "/ReactAnalogClock/static/js/2.55bbea13.chunk.js",
     "static/js/2.55bbea13.chunk.js.map": "/ReactAnalogClock/static/js/2.55bbea13.chunk.js.map",
     "index.html": "/ReactAnalogClock/index.html",
-    "static/css/main.595a04ee.chunk.css.map": "/ReactAnalogClock/static/css/main.595a04ee.chunk.css.map",
+    "static/css/main.9960ac51.chunk.css.map": "/ReactAnalogClock/static/css/main.9960ac51.chunk.css.map",
     "static/js/2.55bbea13.chunk.js.LICENSE.txt": "/ReactAnalogClock/static/js/2.55bbea13.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7969c492.js",
     "static/js/2.55bbea13.chunk.js",
-    "static/css/main.595a04ee.chunk.css",
-    "static/js/main.2306e227.chunk.js"
+    "static/css/main.9960ac51.chunk.css",
+    "static/js/main.a53ee0b1.chunk.js"
   ]
 }
