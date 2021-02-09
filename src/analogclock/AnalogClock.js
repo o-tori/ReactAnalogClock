@@ -2,6 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import "./AnalogClock.css";
 
+function Dial(props){
+  // 要素作成
+  const dials = new Array();
+  for(let i=0; i < 30; i++){
+    // set id
+    const id = "dial" + i;
+    //set class
+    let className="dial";
+    className += i%5==0? i%15==0? " fifteens":" fives ":"" ;
+    //set deg
+    const rotateDeg = (90 + i*6) + "deg";
+    const style= {transform:"rotate("+rotateDeg+")"};
+    
+    dials.push(
+      <div id={id} className={className} style={style}></div>
+    );
+  }
+
+  return(
+    <div>
+      {dials}
+    </div>
+  )
+}
+
 class HourHand extends React.Component{
   render(){
     // 角度設定
@@ -63,9 +88,12 @@ export class AnalogClock extends React.Component{
     const second = this.state.date.getSeconds();
     return(
       <div className="analogClock">
+        <Dial />
         <HourHand hour={hour} minute={minute}/>
         <MinuteHand minute={minute}/>
         <SecondHand second={second}/>
+        <div className="pin"></div>
+
       </div>
     );
   }
