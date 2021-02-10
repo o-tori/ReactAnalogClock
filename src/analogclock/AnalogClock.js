@@ -6,17 +6,15 @@ function Dial(props){
   // 要素作成
   const dials = new Array();
   for(let i=0; i < 30; i++){
-    // set id
-    const id = "dial" + i;
     //set class
     let className="dial";
     className += i%5==0? i%15==0? " fifteens":" fives ":"" ;
     //set deg
     const rotateDeg = (90 + i*6) + "deg";
     const style= {transform:"rotate("+rotateDeg+")"};
-    
+
     dials.push(
-      <div id={id} className={className} style={style}></div>
+      <div className={className} style={style}></div>
     );
   }
 
@@ -25,6 +23,17 @@ function Dial(props){
       {dials}
     </div>
   )
+}
+
+function NumberDial(props){
+  return(
+    <div>
+      <div className="numberDials twelve">Ⅻ</div>
+      <div className="numberDials three">Ⅲ</div>
+      <div className="numberDials six">Ⅵ</div>
+      <div className="numberDials nine">Ⅸ</div>
+    </div>
+  );
 }
 
 class HourHand extends React.Component{
@@ -73,7 +82,7 @@ export class AnalogClock extends React.Component{
   }
 
   componentDidMount(){
-    this.timer = setInterval(()=>this.tick(),1000);
+    this.timer = setInterval(()=>this.tick(),500);
   }
   componentWillUnmount(){
     clearInterval(this.timer);
@@ -89,11 +98,11 @@ export class AnalogClock extends React.Component{
     return(
       <div className="analogClock">
         <Dial />
+        <NumberDial />
         <HourHand hour={hour} minute={minute}/>
         <MinuteHand minute={minute}/>
         <SecondHand second={second}/>
         <div className="pin"></div>
-
       </div>
     );
   }
